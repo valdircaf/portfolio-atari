@@ -1,0 +1,41 @@
+<section class="card d-flex flex-column">
+    <!-- <img src="../../../assets/img/Amigo do bolso.png" alt=""> -->
+    <div class="main-card" (click)="handleExpandCard()">
+        <div class="card-info d-flex flex-column align-items-start">
+            <h1 class="text-white main-card-title mont-serrat-font">{{titleCard}}</h1>
+            <div class="technologies d-flex align-items-center justify-content-center">
+                <img src={{technology}} alt="Tecnologias utilizadas" *ngFor="let technology of technologies">
+            </div>
+        </div>      
+        <div class="main-card-img">
+            <img src={{mainCardImage}} alt="">
+        </div> 
+        <div class="see-more d-flex justify-content-end" (click)="handleExpandCard()">
+            <button class="btn button text-white d-flex align-items-center justify-content-center" (click)="handleExpandCard()">
+                Ver Mais
+            </button>
+        </div>
+    </div>
+    <div class="expand-card d-flex flex-column align-items-center" *ngIf="showExpandCard">
+        <button class="close-button button btn" (click)="handleExpandCard()">
+            <img src="../../../assets/img/icons8-close (1).svg" alt="">
+        </button>
+
+        <div class="div-expand-card-title">
+            <h1 class="text-white expand-card-title">{{titleCard}}</h1>
+            <div class="bar"></div>
+        </div>
+
+        <div class="texts d-flex flex-column align justify-content-center">
+            <p class="paragraph text-center" *ngFor="let description of descriptions">{{description}}</p>
+        </div>
+
+        <div class="div-video d-flex align-items-center justify-content-center">
+            <video controls class="video">
+                <source src={{video}} type="video/mp4"/>
+            </video>
+        </div>
+    </div>
+    <div class="pointer-event" *ngIf="showExpandCard">
+    </div>
+</section>

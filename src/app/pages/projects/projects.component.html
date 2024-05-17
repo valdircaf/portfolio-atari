@@ -1,0 +1,28 @@
+<section [ngClass]="{'showExpandCard': showExpandCard}" class="container-fluid d-flex flex-column align-items-center justify-content-center" (keypress)="handleKeyPress($event)">
+    <button class="arrowBack btn button" routerLink="/">
+        <img src="../../../assets/img/arrow-back.svg" alt="">
+        <!-- <img src="../../../assets/img/icons8-angular.svg" alt="">
+        <img src="../../../assets/img/icons8-css3.svg" alt="">
+        <img src="../../../assets/img/icons8-html5.svg" alt="">
+        <img src="../../../assets/img/icons8-javascript.svg" alt="">
+        <img src="../../../assets/img/icons8-logo-java-coffee-cup.svg" alt="">
+        <img src="../../../assets/img/icons8-reagir.svg" alt="">
+        <img src="../../../assets/img/icons8-atrevimento.svg" alt="">
+        <img src="../../../assets/video/Amigo do bolso.mp4" alt=""> -->
+    </button>
+    <div class="title">
+        <h1 class="title-source font-atari">Projetos</h1>
+    </div>
+    <div class="projects d-flex align-items-center justify-content-center flex-wrap">
+        <div *ngFor="let project of projects">
+            <app-cards-project 
+                [titleCard]="project.name" 
+                [technologies]="project.technologies" 
+                [descriptions]="project.descriptions" 
+                [video]="project.video"
+                [mainCardImage]="project.mainCardImage"
+                >
+            </app-cards-project>
+        </div>
+    </div>
+</section>

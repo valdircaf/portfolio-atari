@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/variables.scss";
+
+@font-face {
+    font-family: "Atari";
+    src: url("./assets/fonts/AtariSmall.ttf");
+}
+
+.font-atari{
+    font-family: "Atari";
+}
+
+.mont-serrat-font{
+    font-family: $montserrat-font;
+}
+
+.title-source{
+    font-size: 48px;
+    color: $black-color;
+}
+
+.menu-option{
+    font-size: 64px;
+    color: $gray-color;
+
+    &:hover{
+        color: $yellow-color;
+    }
+}

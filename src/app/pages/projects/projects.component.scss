@@ -1,0 +1,41 @@
+@import "../../../assets/scss/variables.scss";
+
+.container-fluid{
+    background-image: url("../../../assets/img/gif-atari.gif");
+    min-height: 100vh;
+    gap: 30px;
+    padding: 40px;
+    // padding: 60px;
+
+    .arrowBack{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+}
+
+.title{
+    background-color: $gray-color;
+    margin-top: 30px;
+}
+
+.projects{
+    gap: 30px;
+    width: 450;
+    margin-bottom: 20px;
+}
+
+// .pointer-event{
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 500;
+//     width: 100%;
+//     min-height: 100vh;
+//     background-color: transparent;
+//     pointer-events: none;
+// }
+
+.showExpandCard{
+    overflow-y: hidden;
+}
