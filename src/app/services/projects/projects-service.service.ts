@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { Project } from 'src/app/interface/Project';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProjectsServiceService {
   showExpandCard: boolean = false;
   private statusShowExpandCard = new BehaviorSubject<boolean>(this.showExpandCard);
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { 
   }
@@ -23,7 +24,7 @@ export class ProjectsServiceService {
   }
 
   getProjects(): Observable<Project[]>{
-    return this.http.get<Project[]>(`${environment.apiUrl}projects`)
+    return this.http.get<Project[]>(`${this.apiUrl}projects`)
   }
 
 }
