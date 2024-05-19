@@ -1,16 +1,20 @@
-<section class="container-fluid d-flex flex-column align-items-center ">
+<section class="container-fluid d-flex flex-column align-items-center" *ngIf="showContainer">
     <div class="title">
-        <h1 class="font-atari">Bem vindo ao meu Portfólio!</h1>
+        <h1 class="font-atari text-center">Bem vindo ao meu Portfólio!</h1>
     </div>
     <div class="menu d-flex align-items-center justify-content-center flex-column font-atari">
-        <button class="btn button">
+        <button class="btn button fstMenu">
             <a routerLink="/projects" class="nav-link menu-option" (mouseover)="onMouseOverOption()"><span class="img"><img src="../../../assets/img/arrow-menu.svg" alt=""></span>PROJETOS</a>
         </button>
-        <button class="btn button">
-            <a routerLink="/me" class="nav-link menu-option" (mouseover)="onMouseOverOption()"><span class="img"><img src="../../../assets/img/arrow-menu.svg" alt=""></span>SOBRE MIM</a>
+        <button class="btn button sndMenu">
+            <a routerLink="/about" class="nav-link menu-option" (mouseover)="onMouseOverOption()"><span class="img"><img src="../../../assets/img/arrow-menu.svg" alt=""></span>SOBRE MIM</a>
         </button>
-        <button class="btn button">
+        <button class="btn button trdMenu">
             <a routerLink="/social" class="nav-link menu-option" (mouseover)="onMouseOverOption()"><span class="img"><img src="../../../assets/img/arrow-menu.svg" alt=""></span>COMO ME ACHAR?</a>
         </button>
     </div>
 </section>
+
+<div class="load d-flex align-items-center justify-content-center" *ngIf="!showContainer">
+    <img src="../../../assets/img/f0p.gif" alt="Gif Atari">
+</div>

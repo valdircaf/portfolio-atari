@@ -1,0 +1,77 @@
+@import "../../../assets/scss/variables.scss";
+
+@keyframes btn {
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.container-fluid{
+    background-image: url("../../../assets/img/gif-atari.gif");
+    min-height: 100vh;
+    gap: 30px;
+    .titles{
+        gap: 10px;
+    }
+    .section-title{
+        font-size: 20px;
+    }
+
+    .arrow-back{
+        position: fixed;
+        top: 5px;
+        left: 5px;
+    }
+
+    .subtitle{
+        font-size: 14px;
+    }
+
+    .social-media{
+        padding-left: 10px;
+        gap: 20px;
+        a{
+            cursor: pointer;
+            text-decoration: none;
+            color: #FFF;
+            transition: .2s;
+            font-size: 14px;
+            &:hover{
+                transition: .2s;
+                // color: $card-bg-color;
+            }
+        }
+
+        .gitLinkedin{
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .other{
+            gap: 15px;
+        }
+
+        .button{
+            background-color: $card-bg-color;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 559px) {
+                width: 100%;
+            }
+            span{
+                img{
+                    width: 25px;
+                }
+            }
+            &:hover{
+                animation: btn 1s ease;
+            }
+        }
+    }
+
+}

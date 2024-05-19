@@ -1,12 +1,28 @@
 @import "../../../assets/scss/variables.scss";
 
+@keyframes showContainer {
+    0%{
+        transform: translate(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+.load{
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+}
+
 .container-fluid{
     background-image: url("../../../assets/img/gif-atari.gif");
     min-height: 100vh;
     gap: 30px;
     padding: 40px;
     // padding: 60px;
-
     .arrowBack{
         position: fixed;
         top: 0;
@@ -15,14 +31,16 @@
 }
 
 .title{
-    background-color: $gray-color;
-    margin-top: 30px;
+    // background-color: $gray-color;
+    // margin-top: 20px;
+    margin: 20px 0;
 }
 
 .projects{
     gap: 30px;
     width: 450;
     margin-bottom: 20px;
+    animation: showContainer 1s ease;
 }
 
 // .pointer-event{

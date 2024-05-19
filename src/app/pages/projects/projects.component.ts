@@ -11,6 +11,7 @@ import { ProjectsServiceService } from 'src/app/services/projects/projects-servi
 export class ProjectsComponent implements OnInit {
   projects!: Project[];
   showExpandCard!: boolean;
+  showContainer: boolean = false;
   @ViewChild(CardsProjectComponent) cardComponent!: CardsProjectComponent;
   
   constructor(private projectService: ProjectsServiceService) {   
@@ -19,7 +20,6 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.projectService.getShowExpandCard().subscribe(value => {
       this.showExpandCard = value;
-      // console.log(this.showExpandCard);
     });
 
     this.getProjects();
@@ -31,6 +31,7 @@ export class ProjectsComponent implements OnInit {
   getProjects(): void{
     this.projectService.getProjects().subscribe(project => {
       this.projects = project;
+      this.showContainer = true;
     })
   }
 

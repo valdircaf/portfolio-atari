@@ -10,6 +10,8 @@ import { CardsProjectComponent } from './components/cards-project/cards-project.
 import { CommonModule } from '@angular/common';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './pages/about/about.component';
+import { SocialComponent } from './pages/social/social.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ProjectsComponent,
     CardsProjectComponent,
+    AboutComponent,
+    SocialComponent,
   ],
   imports: [
     BrowserModule,

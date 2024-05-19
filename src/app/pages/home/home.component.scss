@@ -1,5 +1,36 @@
 @import "../../../assets/scss/variables.scss";
 
+@keyframes show1stMenu {
+    0%{
+        transform: translate(-200px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+@keyframes show2ndMenu {
+    0%{
+        transform: translate(-1000px);
+        opacity: 0;
+    }
+    25%{
+        transform: translate(-500px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+
+.load{
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+}
+
 .container-fluid{
     background-image: url("../../../assets/img/gif-atari.gif");
     height: 100vh;
@@ -14,6 +45,18 @@
     margin-top: 200px;
     padding-right: 30px;
     width: 100%;
+    @media (max-width: 1400px) {
+        margin-top: 100px;
+    }
+    .fstMenu{
+        animation: show1stMenu .7s ease-in;
+    }
+    .sndMenu{
+        animation: show2ndMenu 1.5s ease-in;
+    }
+    .trdMenu{
+        animation: show2ndMenu 3.5s ease;
+    }
     .nav-link{
         .img{
             opacity: 0;

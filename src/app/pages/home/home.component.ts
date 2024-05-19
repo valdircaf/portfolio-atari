@@ -8,6 +8,7 @@ import {Howl, Howler} from 'howler';
 })
 export class HomeComponent implements OnInit {
   sound!: Howl;
+  showContainer: boolean = false
 
   constructor() { 
     this.sound = new Howl({
@@ -16,6 +17,9 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.showContainer = true;
+    }, 1500);
   }
 
   onMouseOverOption() {
